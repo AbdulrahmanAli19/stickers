@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".StickerApplication"
+        android:name="abdulrahman.ali19.samplestickerapp.StickerApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -12,33 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EntryActivity">
+        <activity android:name="abdulrahman.ali19.samplestickerapp.EntryActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StickerPackListActivity" />
+        <activity android:name="abdulrahman.ali19.samplestickerapp.StickerPackListActivity" />
         <activity
-            android:name=".StickerPackDetailsActivity"
-            android:parentActivityName=".StickerPackListActivity"
+            android:name="abdulrahman.ali19.samplestickerapp.StickerPackDetailsActivity"
+            android:parentActivityName="abdulrahman.ali19.samplestickerapp.StickerPackListActivity"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.samplestickerapp.StickerPackListActivity" />
+                android:value="abdulrahman.ali19.samplestickerapp.StickerPackListActivity" />
         </activity>
         <activity
-            android:name=".StickerPackInfoActivity"
+            android:name="abdulrahman.ali19.samplestickerapp.StickerPackInfoActivity"
             android:label="@string/title_activity_sticker_pack_info"
-            android:parentActivityName=".StickerPackDetailsActivity"
+            android:parentActivityName="abdulrahman.ali19.samplestickerapp.StickerPackDetailsActivity"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.samplestickerapp.StickerPackDetailsActivity" />
+                android:value="abdulrahman.ali19.samplestickerapp.StickerPackDetailsActivity" />
         </activity>
 
         <provider
-            android:name=".StickerContentProvider"
+            android:name="abdulrahman.ali19.samplestickerapp.StickerContentProvider"
             android:authorities="${contentProviderAuthority}"
             android:enabled="true"
             android:exported="true"

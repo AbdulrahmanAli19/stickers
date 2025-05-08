@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.example.samplestickerapp;
+package abdulrahman.ali19.samplestickerapp;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.os.Bundle;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.samplestickerapp.R;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

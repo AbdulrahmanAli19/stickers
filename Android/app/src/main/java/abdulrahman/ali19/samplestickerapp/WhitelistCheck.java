@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.example.samplestickerapp;
+package abdulrahman.ali19.samplestickerapp;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -17,6 +17,8 @@ import android.database.Cursor;
 import android.net.Uri;
 
 import androidx.annotation.NonNull;
+
+import com.example.samplestickerapp.BuildConfig;
 
 class WhitelistCheck {
     private static final String AUTHORITY_QUERY_PARAM = "authority";

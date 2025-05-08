@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.example.samplestickerapp;
+package abdulrahman.ali19.samplestickerapp;
 
 import android.content.ContentProvider;
 import android.content.ContentResolver;
@@ -23,6 +23,8 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.samplestickerapp.BuildConfig;
 
 import java.io.IOException;
 import java.io.InputStream;
