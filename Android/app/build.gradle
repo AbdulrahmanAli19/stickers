@@ -1,4 +1,9 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'  version "2.0.21-1.0.27"
+    id 'com.google.dagger.hilt.android' version '2.56.2'
+}
 
 android {
     //the compression of webp file during build causes problem with FileDescriptor in ContentProvider.
@@ -8,7 +13,7 @@ android {
     compileSdk 35
     defaultConfig {
         applicationId "abdulrahman.ali19.samplestickerapp"
-        minSdkVersion 21
+        minSdkVersion 25
         targetSdk 35
         versionCode 1
         versionName "1.0"
@@ -38,12 +43,17 @@ android {
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }
-
+    buildFeatures {
+        buildConfig true
+    }
     packagingOptions {
         exclude 'lib/*/libnative-imagetranscoder.so'
         exclude 'lib/*/libnative-filters.so'
     }
     namespace 'com.example.samplestickerapp'
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
     // Configures multiple APKs based on ABI.
     // see https://developer.android.com/studio/build/configure-apk-splits#configure-abi-split
@@ -103,14 +113,29 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.core:core-ktx:1.16.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.6.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    def fresco_version = '2.5.0'
+    def fresco_version = '3.6.0'
     implementation "com.facebook.fresco:fresco:$fresco_version"
+    //noinspection Aligned16KB
     implementation "com.facebook.fresco:webpsupport:$fresco_version"
     implementation "com.facebook.fresco:animated-webp:$fresco_version"
     implementation "com.facebook.fresco:animated-base:$fresco_version"
+
+    implementation "io.reactivex.rxjava3:rxjava:3.1.10"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0"
+
+    implementation "com.google.dagger:hilt-android:2.56.2"
+    ksp "com.google.dagger:hilt-compiler:2.56.2"
+}
+
+hilt {
+    enableAggregatingTask = false
 }
