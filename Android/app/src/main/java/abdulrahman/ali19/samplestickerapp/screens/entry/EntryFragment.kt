@@ -1,4 +1,4 @@
-package abdulrahman.ali19.samplestickerapp.entry
+package abdulrahman.ali19.samplestickerapp.screens.entry
 
 import abdulrahman.ali19.samplestickerapp.StickerPack
 import abdulrahman.ali19.samplestickerapp.StickerPackDetailsActivity
