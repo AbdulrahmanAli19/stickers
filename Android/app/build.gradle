@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.devtools.ksp'  version "2.0.21-1.0.27"
     id 'com.google.dagger.hilt.android' version '2.56.2'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '2.0.21'
 }
 
 android {
@@ -45,6 +46,7 @@ android {
     }
     buildFeatures {
         buildConfig true
+        viewBinding true
     }
     packagingOptions {
         exclude 'lib/*/libnative-imagetranscoder.so'
@@ -114,6 +116,17 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.core:core-ktx:1.16.0'
+
+    def activity_version = "1.10.1"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+    def fragment_version = "1.8.6"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    def nav_version = "2.9.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.6.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
@@ -125,9 +138,6 @@ dependencies {
     implementation "com.facebook.fresco:webpsupport:$fresco_version"
     implementation "com.facebook.fresco:animated-webp:$fresco_version"
     implementation "com.facebook.fresco:animated-base:$fresco_version"
-
-    implementation "io.reactivex.rxjava3:rxjava:3.1.10"
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0"

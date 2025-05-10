@@ -12,13 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="abdulrahman.ali19.samplestickerapp.EntryActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name="abdulrahman.ali19.samplestickerapp.StickerPackListActivity" />
         <activity
             android:name="abdulrahman.ali19.samplestickerapp.StickerPackDetailsActivity"
@@ -27,6 +20,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="abdulrahman.ali19.samplestickerapp.StickerPackListActivity" />
+        </activity>
+        <activity
+            android:name="abdulrahman.ali19.samplestickerapp.MainActivity"
+            android:exported="true"
+            android:parentActivityName="abdulrahman.ali19.samplestickerapp.StickerPackListActivity"
+            tools:ignore="UnusedAttribute">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="abdulrahman.ali19.samplestickerapp.StickerPackInfoActivity"
