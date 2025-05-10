@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/entryFragment"
-        android:name="abdulrahman.ali19.samplestickerapp.entry.EntryFragment"
+        android:name="abdulrahman.ali19.samplestickerapp.screens.entry.EntryFragment"
         android:label="EntryFragment"
         tools:layout="@layout/fragment_entry" />
 
